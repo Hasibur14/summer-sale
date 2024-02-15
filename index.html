@@ -5,16 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summer Sale</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+
 </head>
 
-<body>
-    <header>
-        <div class="bg-[#F9F6E2]">
-            <div>
-                <p>---SALE FEVER---</p>
-                <h2>Purchase TK 200 or <br> above & get <span>20% off</span></h2>
+<body class="work-sans-font">
+    <header class="mx-auto">
+        <div class="bg-[#F9F6E2] h-[800px] lg:flex text-center items-center justify-center gap-14">
+            <div class="space-y-10">
+                <p class="text-2xl font-semibold">---SALE FEVER---</p>
+                <h2 class="text-5xl font-bold">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20%
+                        off</span></h2>
+                <div class="flex gap-2 ml-8 lg:ml-20">
+                    <p class="text-lg font-semibold mt-2">Use Promo Code</p>
+                    <button class="btn bg-[#E527B2] text-white px-2 rounded-md mx-2 text-lg">SELL 200</button>
+                </div>
             </div>
-            <div>
+            <div class="max-w-lg">
                 <img src="./images/Summer 1.png" alt="">
             </div>
         </div>
