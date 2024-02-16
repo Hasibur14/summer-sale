@@ -23,24 +23,35 @@ for (const card of cards) {
 
 
 const applyBtn = document.getElementById('apply-btn');
-applyBtn.addEventListener('click',function(){
-   
+applyBtn.addEventListener('click', function () {
+
 
     const discountElement = document.getElementById('input-field').value;
     const couponCode = discountElement.split(' ').join('').toUpperCase();
     console.log(couponCode)
 
-    if(totalPrice >= 200){
-       if(couponCode === 'SELL200'){
+    if (totalPrice >= 200) {
+        if (couponCode === 'SELL200') {
+            //discount price calculation
+            const discountElement = document.getElementById('discountPrice');
+            const discountAmount = totalPrice * 0.2;
+            discountElement.innerText = discountAmount.toFixed(2);
 
-       }
-       else{
-        alert('Invalid coupon ')
-       }
+            //rest total calculation
+            const restTotal = document.getElementById('total');
+            const restTotalPrice = totalPrice - discountAmount;
+            restTotal.innerText = restTotalPrice.toFixed(2);
+
+            document.getElementById('input-field').value = '';
+
+        }
+        else {
+            alert('Invalid Coupon cCode');
+            document.getElementById('input-field').value = '';
+        }
     }
-    else{
-        alert("please at least $200 buy")
+    else {
+        alert("please at least $200 buy");
+        document.getElementById('input-field').value = '';
     }
-   // console.log(discountElement.value);
-    
 });
